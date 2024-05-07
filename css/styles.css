@@ -1,0 +1,217 @@
+/*All css for the Nova Drift page*/
+@media (max-width: 600px) {
+	body.nova {
+		background-repeat: no-repeat;
+		background-attachment: local, scroll;
+		background-position: right;
+		background-size: 30%;
+		background-image: url("../media/Nova Drift/background-400x1054.png");
+	}
+}
+
+@media (min-width: 601px) {
+	body.nova {
+		background-repeat: no-repeat;
+		background-attachment: local, scroll;
+		background-position: right;
+		background-size: 30%;
+		background-image: url("../media/Nova Drift/background-800x2108.png");
+	}
+}
+
+#wrapper.nova {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+body.nova {
+	font-family: Verdana, Arial, sans-sarif;
+	color: white;
+
+	background-color: #0F0F2B;
+}
+
+header.nova {
+	text-align: center;
+	color: white;
+}
+
+nav.nova {
+	text-align: center;
+	background-color: white;
+
+}
+
+main.grid.nova {
+	/*shrink to let background image show*/
+	margin-right: 25%;
+	gap: 1em 1em;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+
+main.grid.descend.nova {
+	background-color: black;
+}
+
+footer.nova {
+	background-color: white;
+	font-size: 1em;
+	font-style: italic;
+	text-align: center;
+}
+
+a.nova:link,
+a.nova:visited {
+	background-color: #16164a;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	display: inline-block;
+}
+
+/*All css for the BYTEPATH page*/
+#wrapper.byte {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+body.byte {
+	background-color: black;
+	color: white;
+	font-family: Verdana, Arial, sans-sarif;
+}
+
+header.byte {
+	text-align: center;
+}
+
+nav.byte {
+	text-align: center;
+	background-color: #595959;
+}
+
+a.byte:link,
+a.byte:visited {
+	background-color: #2f2f30;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	display: inline-block;
+}
+
+footer.byte {
+	text-align: center;
+	background-color: #595959;
+}
+
+/*All css for the Comparison page*/
+#wrapper.compare {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+body.compare {
+	background-color: #162a4f;
+	color: white;
+	font-family: Verdana, Arial, sans-sarif;
+}
+
+header.compare {
+	color: white;
+	text-align: center;
+}
+
+nav.compare {
+	text-align: center;
+	background-color: #949494;
+}
+
+#flexright.compare {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	margin-left: 20%;
+}
+
+#flexleft.compare {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly;
+	margin-right: 20%;
+}
+
+#rightheading.compare {
+	margin-left: 20%;
+	text-align: center;
+}
+
+#leftheading.compare {
+	margin-right: 20%;
+	text-align: center;
+}
+
+#center.compare {
+	text-align: center;
+}
+
+footer.compare {
+	text-align: center;
+	background-color: #949494;
+}
+
+a.compare:link,
+a.compare:visited {
+	background-color: #22314a;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	display: inline-block;
+}
+
+/*All css for the Navigation page*/
+#wrapper.nav {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+body.nav {
+	background-color: #162a4f;
+	color: white;
+	font-family: Verdana, Arial, sans-sarif;
+}
+
+header.nav {
+	color: white;
+	text-align: center;
+}
+
+nav.nav {
+	text-align: center;
+	background-color: #949494;
+}
+
+#flex.nav {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+a.nav:link,
+a.nav:visited {
+	background-color: #22314a;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	display: inline-block;
+}
+
+footer.nav {
+	text-align: center;
+	background-color: #949494;
+}
