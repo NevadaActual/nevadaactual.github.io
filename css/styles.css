@@ -1,6 +1,31 @@
-/*All css for the Nova Drift page*/
+/*scuffed expand table on click code, taken from "https://jsfiddle.net/4h75G/13/"*/
+body,table{
+    font-family:verdana,arial,sans-serif;
+    font-size:12px;
+    border-collapse:collapse;
+}
+
+td,th{
+    padding:3px 3px;
+    margin:0px;
+    border:1px solid #BBB;
+    white-space:nowrap;
+}
+
+.content{
+    height:15px;
+    width:200px;
+    overflow:hidden;
+    text-overflow:ellipsis
+}
+
+input[type='checkbox'] { visibility: hidden; position: absolute; }
+input[type='checkbox']:checked + .content { height: auto; width: auto;}
+/*album display preview taken from "https://jsfiddle.net/d2hg0Lg6/2/"*/
+
+/*All css for the Streamable page*/
 @media (max-width: 600px) {
-	body.nova {
+	body.stream {
 		background-repeat: no-repeat;
 		background-attachment: local, scroll;
 		background-position: right;
@@ -10,7 +35,7 @@
 }
 
 @media (min-width: 601px) {
-	body.nova {
+	body.stream {
 		background-repeat: no-repeat;
 		background-attachment: local, scroll;
 		background-position: right;
@@ -19,30 +44,31 @@
 	}
 }
 
-#wrapper.nova {
+#wrapper.stream {
 	margin-left: 10%;
 	margin-right: 10%;
 }
 
-body.nova {
+body.stream {
 	font-family: Verdana, Arial, sans-sarif;
 	color: white;
 
 	background-color: #0F0F2B;
 }
 
-header.nova {
+header.stream {
 	text-align: center;
 	color: white;
 }
 
-nav.nova {
+nav.stream {
 	text-align: center;
+	background-color: white;
 	background-color: white;
 
 }
 
-main.grid.nova {
+main.grid.stream {
 	/*shrink to let background image show*/
 	margin-right: 25%;
 	gap: 1em 1em;
@@ -52,19 +78,19 @@ main.grid.nova {
 	justify-content: flex-start;
 }
 
-main.grid.descend.nova {
+main.grid.descend.stream {
 	background-color: black;
 }
 
-footer.nova {
+footer.stream {
 	background-color: white;
 	font-size: 1em;
 	font-style: italic;
 	text-align: center;
 }
 
-a.nova:link,
-a.nova:visited {
+a.stream:link,
+a.stream:visited {
 	background-color: #16164a;
 	color: white;
 	padding: 10px 20px;
@@ -72,29 +98,29 @@ a.nova:visited {
 	display: inline-block;
 }
 
-/*All css for the BYTEPATH page*/
-#wrapper.byte {
+/*All css for the Non-streamable page*/
+#wrapper.non {
 	margin-left: 10%;
 	margin-right: 10%;
 }
 
-body.byte {
+body.non {
 	background-color: black;
 	color: white;
 	font-family: Verdana, Arial, sans-sarif;
 }
 
-header.byte {
+header.non {
 	text-align: center;
 }
 
-nav.byte {
+nav.non {
 	text-align: center;
 	background-color: #595959;
 }
 
-a.byte:link,
-a.byte:visited {
+a.non:link,
+a.non:visited {
 	background-color: #2f2f30;
 	color: white;
 	padding: 10px 20px;
@@ -102,34 +128,34 @@ a.byte:visited {
 	display: inline-block;
 }
 
-footer.byte {
+footer.non {
 	text-align: center;
 	background-color: #595959;
 }
 
-/*All css for the Comparison page*/
-#wrapper.compare {
+/*All css for the Contact page*/
+#wrapper.contact {
 	margin-left: 10%;
 	margin-right: 10%;
 }
 
-body.compare {
+body.contact {
 	background-color: #162a4f;
 	color: white;
 	font-family: Verdana, Arial, sans-sarif;
 }
 
-header.compare {
+header.contact {
 	color: white;
 	text-align: center;
 }
 
-nav.compare {
+nav.contact {
 	text-align: center;
 	background-color: #949494;
 }
 
-#flexright.compare {
+#flexright.contact {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -137,7 +163,7 @@ nav.compare {
 	margin-left: 20%;
 }
 
-#flexleft.compare {
+#flexleft.contact {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -145,27 +171,27 @@ nav.compare {
 	margin-right: 20%;
 }
 
-#rightheading.compare {
+#rightheading.contact {
 	margin-left: 20%;
 	text-align: center;
 }
 
-#leftheading.compare {
+#leftheading.contact {
 	margin-right: 20%;
 	text-align: center;
 }
 
-#center.compare {
+#center.contact {
 	text-align: center;
 }
 
-footer.compare {
+footer.contact {
 	text-align: center;
 	background-color: #949494;
 }
 
-a.compare:link,
-a.compare:visited {
+a.contact:link,
+a.contact:visited {
 	background-color: #22314a;
 	color: white;
 	padding: 10px 20px;
@@ -173,37 +199,46 @@ a.compare:visited {
 	display: inline-block;
 }
 
-/*All css for the Navigation page*/
-#wrapper.nav {
+/*All css for the Index page*/
+#wrapper.index {
 	margin-left: 10%;
 	margin-right: 10%;
 }
 
-body.nav {
-	background-color: #162a4f;
+body.index {
+	background-color: black;
 	color: white;
 	font-family: Verdana, Arial, sans-sarif;
 }
 
-header.nav {
+header.index {
 	color: white;
 	text-align: center;
 }
 
-nav.nav {
+nav.index {
 	text-align: center;
 	background-color: #949494;
 }
 
-#flex.nav {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+#flex.index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-a.nav:link,
-a.nav:visited {
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.right {
+  max-width: 100%;
+  margin-left: 28px;
+}
+
+a.index:link,
+a.index:visited {
 	background-color: #22314a;
 	color: white;
 	padding: 10px 20px;
@@ -211,7 +246,7 @@ a.nav:visited {
 	display: inline-block;
 }
 
-footer.nav {
+footer.index {
 	text-align: center;
 	background-color: #949494;
 }
