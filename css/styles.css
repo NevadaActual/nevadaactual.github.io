@@ -4,61 +4,64 @@ body,table{
     font-size:12px;
     border-collapse:collapse;
 }
-
-td,th{
-    padding:3px 3px;
-    margin:0px;
-    border:1px solid #BBB;
-    white-space:nowrap;
+table {
+	margin-left: auto;
+	margin-right: auto;
+	display    : table;
+	width  : 80%;
+	box-sizing : border-box;
+	border-collapse: collapse;
 }
-
+td,th{
+    padding:0.2em 0.2em;
+    margin:0px;
+    border:0.1em solid #BBB;
+}
 .content{
     height:15px;
-    width:200px;
+    width:120x;
     overflow:hidden;
-    text-overflow:ellipsis
+    text-overflow:ellipsis;
 }
 
-input[type='checkbox'] { visibility: hidden; position: absolute; }
+input[type='checkbox'] { visibility: hidden; position: absolute;}
 input[type='checkbox']:checked + .content { height: auto; width: auto;}
 /*album display preview taken from "https://jsfiddle.net/d2hg0Lg6/2/"*/
-
-/*base form taken from "https://www.w3schools.com/howto/howto_css_contact_form.asp"*/
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+.wow {
+  position: relative;
+  width: 10%;
 }
 
-.buttoncenter{ text-align: center; }
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.wow img {
+  display: inline;
+  width: 100%;
+  height: auto;
 }
 
-/* When moving the mouse over the submit button, darken the color*/
-input[type=submit]:hover {
-  background-color: #45a049;
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  z-index:1;
 }
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-} 
+.wow:hover > .overlay {
+  opacity: 1;
+  width: 20em;
+  height: auto;
+}
+
+#wow img:hover {
+  opacity: 1;
+}
+
 /*css styling for all song links*/
 a.song:link,
 a.song:visited {
@@ -73,6 +76,9 @@ a.song:visited {
 		background-size: 30%;
 		background-image: url("../media/Nova Drift/background-400x1054.png");
 	}
+	.wow:hover > .overlay {
+	  width: 8em;
+	}
 }
 
 @media (min-width: 601px) {
@@ -84,7 +90,6 @@ a.song:visited {
 		background-image: url("../media/Nova Drift/background-800x2108.png");
 	}
 }
-
 #wrapper.stream {
 	margin-left: 10%;
 	margin-right: 10%;
@@ -93,7 +98,6 @@ a.song:visited {
 body.stream {
 	font-family: Verdana, Arial, sans-sarif;
 	color: white;
-
 	background-color: #0F0F2B;
 }
 
@@ -105,24 +109,9 @@ header.stream {
 nav.stream {
 	text-align: center;
 	background-color: white;
-	background-color: white;
-
+	border: none;
+	border-radius: 10px;
 }
-
-main.grid.stream {
-	/*shrink to let background image show*/
-	margin-right: 25%;
-	gap: 1em 1em;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-}
-
-main.grid.descend.stream {
-	background-color: black;
-}
-
 footer.stream {
 	background-color: white;
 	font-size: 1em;
@@ -135,6 +124,8 @@ a.stream:visited {
 	color: white;
 	padding: 10px 20px;
 	text-align: center;
+	border: none;
+	border-radius: 4px;
 	display: inline-block;
 }
 
@@ -165,6 +156,8 @@ a.non:visited {
 	color: white;
 	padding: 10px 20px;
 	text-align: center;
+	border: none;
+	border-radius: 4px;
 	display: inline-block;
 }
 
@@ -194,49 +187,46 @@ nav.contact {
 	text-align: center;
 	background-color: #949494;
 }
-
-#flexright.contact {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	margin-left: 20%;
+/*base form taken from "https://www.w3schools.com/howto/howto_css_contact_form.asp"*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 0.2em; 
+  border: 1px solid #ccc;
+  border-radius: 0.2em; 
+  box-sizing: border-box; 
+  margin-top: 0.5em; 
+  margin-bottom: 0.5em;
+  resize: vertical
 }
 
-#flexleft.contact {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
-	margin-right: 20%;
+.buttoncenter{ text-align: center; }
+
+input[type=submit] {
+  background-color: LightGray;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#rightheading.contact {
-	margin-left: 20%;
-	text-align: center;
+input[type=submit]:hover {
+  background-color: grey;
 }
-
-#leftheading.contact {
-	margin-right: 20%;
-	text-align: center;
-}
-
-#center.contact {
-	text-align: center;
-}
-
-footer.contact {
-	text-align: center;
-	background-color: #949494;
-}
-
 a.contact:link,
 a.contact:visited {
 	background-color: #22314a;
 	color: white;
 	padding: 10px 20px;
 	text-align: center;
+	border: none;
+	border-radius: 4px;	
 	display: inline-block;
+}
+
+footer.contact {
+	text-align: center;
+	background-color: #949494;
 }
 
 /*All css for the Index page*/
@@ -283,6 +273,8 @@ a.index:visited {
 	color: white;
 	padding: 10px 20px;
 	text-align: center;
+	border: none;
+	border-radius: 4px;	
 	display: inline-block;
 }
 
